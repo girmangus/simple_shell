@@ -77,10 +77,7 @@ typedef struct customCommand_s
 	void (*func)(appData_t *);
 } customCommand_t;
 
-environment_t *_addEnvNodeEnd(
-	environment_t **prmHeadNode,
-	char *prmGlobal
-);
+environment_t *_addEnvNodeEnd(environment_t **prmHeadNode,	char *prmGlobal);
 void _addWord(char *prmWord, int *prmIndex, char **prmArray);
 int _atoi(char *prmString);
 void *_calloc(unsigned int prmNumber, unsigned int prmSize);
@@ -114,10 +111,7 @@ environment_t *_getenv(environment_t *prmEnviron, char *prmName);
 char *_getenvname(char *prmVariable);
 char *_getenvvalue(char *prmVariable);
 int _getEnvIndex(environment_t *prmHead, char *prmName);
-environment_t *_getEnvNodeAtIndex(
-	environment_t *prmHead,
-	unsigned int prmIndex
-);
+environment_t *_getEnvNodeAtIndex(environment_t *prmHead, int prmIndex);
 environment_t *_getLastEnvNode(environment_t *prmHeadNode);
 void _getline(appData_t *prmData);
 char *_getword(char *prmGlobal, int prmOffset, int prmSize);
@@ -156,5 +150,4 @@ void _unsetenvHelp(void);
 void _unsetEnvironment(appData_t *prmData);
 char *_which(appData_t *prmData);
 int _wordNumber(char *prmString, char *prmSeparators);
-
 #endif

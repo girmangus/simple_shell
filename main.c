@@ -1,7 +1,10 @@
 #include "shell.h"
 
 /**
- * main - main entry 
+ * main - main entry
+ *
+ * @argc: argc structure
+ * @argv: argv name
  *
  * Return: 1 on exit
  */
