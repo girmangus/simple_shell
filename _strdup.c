@@ -1,33 +1,28 @@
-#include "main.h"
+#include "shell.h"
 
 /**
- *_strdup - duplicate a string
- *@str: is a pointer
- *Return: pointer to array
+ * _strdup - a pointer to a newly allocated space in memory,
+ *           which contains a copy of the string given as a parameter.
+ *
+ * @prmString: char pointer to copy
+ *
+ * Return: a new char pointer
  */
-
-char *_strdup(char *str)
+char *_strdup(char *prmString)
 {
-	char *new;
-	int i;
+	char *string;
+	int cLoop;
 
-	if (str == NULL)
+	if (prmString == NULL)
 		return (NULL);
 
-	new = malloc(_strlen(str) + 1);
+	string = malloc(sizeof(char) * (_strlen(prmString) + 1));
 
-	if (new == NULL)
+	if (string == NULL)
 		return (NULL);
 
-	i = 0;
+	for (cLoop = 0; cLoop < _strlen(prmString) + 1; cLoop++)
+		string[cLoop] = prmString[cLoop];
 
-	while (str[i] != '\0')
-	{
-		new[i] = str[i];
-		i++;
-	}
-
-	new[i] = '\0';
-
-	return (new);
+	return (string);
 }

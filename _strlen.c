@@ -1,14 +1,15 @@
-#include "main.h"
+#include "shell.h"
 
 /**
- *_strlen - returns the length of a string
- *@s: is a character
- * Return: 0;
+ * _strlen - return string length
+ *
+ * @prmStr: string
+ *
+ * Return: string length
  */
-
-unsigned int _strlen(char *s)
+int _strlen(char *prmStr)
 {
-	if (*s == '\0')
+	if (prmStr == NULL || *prmStr == '\0')
 		return (0);
-	return ((1) + _strlen(s + 1));
+	return (_strlen(prmStr + 1) + 1);
 }
