@@ -1,5 +1,10 @@
 #include "shell.h"
 
+/**
+ * main - main entry 
+ *
+ * Return: 1 on exit
+ */
 int main(int argc __attribute__((unused)), char **argv)
 {
 	appData_t *appData = NULL;

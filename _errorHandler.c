@@ -1,5 +1,8 @@
 #include "shell.h"
 
+/**
+ * _errorHandler - Handle error env command
+ */
 void _errorHandler(appData_t *prmData, int messageCode)
 {
 	int i = 0;
