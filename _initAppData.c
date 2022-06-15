@@ -3,6 +3,7 @@
 /**
  * _initData - init data structure
  *
+ * @prmArgv: argument data
  * Return: data structure
  */
 appData_t *_initData(char **prmArgv)

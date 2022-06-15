@@ -2,6 +2,9 @@
 
 /**
  * _errorHandler - Handle error env command
+ *
+ * @prmData: Data
+ * @messageCode: message code
  */
 void _errorHandler(appData_t *prmData, int messageCode)
 {

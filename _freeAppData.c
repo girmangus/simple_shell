@@ -25,10 +25,4 @@ void _freeAppData(appData_t *prmData)
 	if (prmData->history != NULL)
 		_freeCharDoublePointer(prmData->history);
 	prmData->history = NULL;
-	/*if (prmData->env != NULL)
-		_freeEnvList(prmData->env);
-	prmData->env = NULL;*/
-	/*if (prmData != NULL)
-		free(prmData);
-	prmData = NULL;*/
 }

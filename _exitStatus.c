@@ -15,7 +15,8 @@ void _exitStatus(appData_t *prmData)
 	if (prmData->arguments != NULL)
 		code = _atoi(prmData->arguments[1]);
 
-	if (code < 0 || (prmData->arguments[1] != NULL && !_isNumber(prmData->arguments[1])))
+	if (code < 0 || (prmData->arguments[1] != NULL &&
+			!_isNumber(prmData->arguments[1])))
 	{
 		_errorHandler(prmData, 106);
 		code = 2;
